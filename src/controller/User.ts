@@ -7,6 +7,8 @@ const secretKey: any = process.env.TOKEN_SECRET_KEY;
 export default class UserCallback {
   static async get(req: Request, res: Response) {
     try {
+      const { id }= req.params
+
       const payload = await UserModel.find()
       return res.json({ success: true,size:payload.length, data: payload });
     } catch (err) {

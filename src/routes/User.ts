@@ -5,7 +5,7 @@ const UserRouter = Router();
 
 UserRouter.get("/", UserCallback.get);
 UserRouter.post("/", UserCallback.create);
-UserRouter.put("/:id", UserCallback.update);
+UserRouter.put("/:id", UserCallback.update);  // params id
 UserRouter.delete("/:id", UserCallback.delete);
 
 export default UserRouter;
